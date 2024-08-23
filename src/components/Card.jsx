@@ -2,13 +2,13 @@
 import React from 'react'
 
 function Card({pokemon}) {
-    const{name}=pokemon
-    
+    const{name,url}=pokemon
+    const pokemonId=url.split('/')[6]
   return (
 
     <div className="relative h-[300px] w-[400px] rounded-xl mt-5 ml-5">
   <img
-     src="http://pluspng.com/img-png/pokemon-logo-png-pokemon-logo-on-gradient-1600.png"
+     src={`https://pokeapi.co/api/v2/pokemon/${pokemonId}`}
     alt="AirMax Pro"
     className="z-0 h-full w-full rounded-md object-cover"
   />
